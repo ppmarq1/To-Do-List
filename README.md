@@ -7,6 +7,7 @@
 ## Built With
 
 - HTML
+- HTML Webpack Plugin
 - CSS
 - JavaScript / ES6
 - Webpack
