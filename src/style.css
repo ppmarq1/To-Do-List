@@ -1,0 +1,99 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Lato&family=Poppins&display=swap%27');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(204, 204, 240);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(48, 46, 46);
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(48, 46, 46);
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(220, 220, 220, 1);
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+input:focus {
+  outline-color: grey;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todo-list-container {
+  width: 500px;
+  max-width: 500px;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(150, 150, 150, 0.25);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(220, 220, 220, 1);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(220, 220, 220, 1);
+}
+
+.font-awesome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  width: fit-content;
+  margin-right: 1rem;
+}
+
+.strike-through {
+  text-decoration: line-through;
+  color: rgba(150, 150, 150, 1);
+}
