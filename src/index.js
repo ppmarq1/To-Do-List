@@ -1,54 +1,46 @@
-// ### 0. Imports
+// Imports
 import './style.css';
+import addElem from './modules/add-elem.js';
+import TaskList from './modules/class-task-list.js';
+import refreshList from './modules/refresh-list.js';
 
-// ### 1. Data
-const taskList = [
-  {
-    description: 'Shopping',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Study ES6 - Webpack',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Complete Awesome Books ES6',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Workout',
-    completed: true,
-    index: 3,
-  },
-];
+const taskList = new TaskList();
 
-// ### 2. DOM Manipulations
+// DOM
 const mainContainer = document.querySelector('.todo-list-container');
 
+// HTML skeleton
+// Header (Title and input)
 mainContainer.innerHTML = `<div class="row">
 <h1>Today's To Do</h1>
 <i class="fa-solid fa-rotate fa-lg font-awesome-icon"></i>
-</div>
-<div>
-<input placeholder="Add to your list...">
 </div>`;
+const inputContainer = addElem('form', [], mainContainer);
+const inputText = addElem('input', ['input-add-task'], inputContainer);
+inputText.setAttribute('placeholder', 'Add to your list...');
+addElem('i', ['fa-solid', 'fa-arrow-right-to-bracket', 'fa-sm', 'font-awesome-icon'], inputContainer);
+// Main (list)
 
-taskList.forEach((e) => {
-  let isChecked;
-  let strikeThrough;
-  if (e.completed === true) {
-    isChecked = 'checked';
-    strikeThrough = 'strike-through';
-  }
+const listContainer = addElem('div', [], mainContainer);
+// Bottom (button)
+const clearBtn = addElem('button', ['button'], mainContainer);
+clearBtn.textContent = 'Clear all completed';
 
-  mainContainer.innerHTML += `<div class="row">
-  <input class="checkbox" type="checkbox" ${isChecked}>
-  <p class="${strikeThrough}">${e.description}</p>
-  <i class="fa-solid fa-ellipsis-vertical fa-lg font-awesome-icon"></i>
-  </div>`;
-});
+// Input
+inputContainer.onsubmit = (e) => {
+  e.preventDefault();
+  taskList.addTask(inputText.value);
 
-mainContainer.innerHTML += '<button class="button">Clear all completed</button>';
+  inputContainer.reset();
+  refreshList(taskList, listContainer);
+};
+
+// clear button
+clearBtn.onclick = () => {
+  // console.log('clear');
+  taskList.clearCompleted();
+  refreshList(taskList, listContainer);
+};
+
+// On load
+refreshList(taskList, listContainer);
