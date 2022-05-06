@@ -39,6 +39,20 @@ const refreshList = (_class, _container) => {
       _class.removeTask(elemID);
       refreshList(_class, _container);
     };
+
+    // Event listener on checkbox (status change)
+    listCheckBox.addEventListener('click', () => {
+      _class.updateStatus(elemID, listCheckBox.checked);
+      refreshList(_class, _container);
+    });
+    // Event listener on list rename
+    listText.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        _class.renameTask(elemID, listText.value);
+        refreshList(_class, _container);
+      }
+    });
   });
 };
+
 export default refreshList;
