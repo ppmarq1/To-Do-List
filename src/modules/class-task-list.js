@@ -65,6 +65,12 @@ export default class TaskList {
     localStorage.setItem(storageName, JSON.stringify(this.data));
   }
 
+  clearCompleted() {
+    this.data = this.data.filter((i) => i.completed === false);
+    this.resetIds();
+    localStorage.setItem(storageName, JSON.stringify(this.data));
+  }
+
   resetIds() {
     let i = 1;
     this.data.forEach((e) => {
