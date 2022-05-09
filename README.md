@@ -12,6 +12,10 @@
 - JavaScript / ES6
 - Webpack
 
+## Live Demo 
+
+Feel free to check the: [Portfolio-link](https://ppmarq1.github.io/To-Do-List/)
+
 ### Install
 
 Clone the repository
