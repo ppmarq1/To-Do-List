@@ -22,12 +22,16 @@ Clone the repository
 https://github.com/ppmarq1/To-do-List.git
 npm . init -y
 npm install
+npm install babel-cli babel-core --save-dev
+npm i --save-dev jest-localstorage-mock
+
 
 ## Run tests
 
 npx stylelint "\*_/_.{css,scss}"
 npx hint .
 npx eslint .
+npm test
 
 - Web Browser
 - [Visual Studio code](https://code.visualstudio.com/)
