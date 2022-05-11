@@ -1,33 +1,44 @@
 {
-  "name": "my-webpack",
+  "name": "my-webpack-biolerplate",
   "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose --coverage",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
   },
+  "jest": {
+    "resetMocks": false,
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ppmarq1/To-Do-List.git"
+    "url": "git+https://github.com/JauJau088/my-webpack-biolerplate.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ppmarq1/To-Do-List/issues"
+    "url": "https://github.com/JauJau088/my-webpack-biolerplate/issues"
   },
-  "homepage": "https://ppmarq1.github.io/To-Do-List/",
+  "homepage": "https://github.com/JauJau088/my-webpack-biolerplate#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "html": "^1.0.0",
+    "hint": "^6.1.12",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.0.3",
+    "jest-localstorage-mock": "^2.4.21",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -35,10 +46,10 @@
     "stylelint-scss": "^3.21.0",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1",
-    "webpack-plugin": "^1.0.5"
+    "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "jest-environment-jsdom": "^28.0.2",
     "lodash": "^4.17.21"
   }
 }
