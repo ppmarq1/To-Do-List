@@ -65,4 +65,42 @@ describe('Check if the localStorage and the DOM are used:', () => {
         .toBe(3);
     });
   });
+  // remove test part 1
+  describe('Remove items:', () => {
+    test(` localStorage remove task: "${taskA}"`, () => {
+      taskList.removeTask(1);
+
+      expect(JSON.parse(localStorage.getItem(storageName)))
+        . toEqual([
+          { description: taskB, id: 1, completed: false },
+          { description: taskC, id: 2, completed: false },
+        ]);
+    });
+
+    test(`DOM remove task: "${taskA}"`, () => {
+      refreshList(taskList, document.body);
+      const validateElements = document.querySelectorAll('.todo-list');
+
+      expect(validateElements.length)
+        .toBe(2);
+    });
+
+    test(`localStorage remove task: "${taskC}"`, () => {
+      taskList.removeTask(2);
+
+      expect(JSON.parse(localStorage.getItem(storageName)))
+        . toEqual([
+          { description: taskB, id: 1, completed: false },
+        ]);
+    });
+
+    test(`DOM remove task: "${taskC}"`, () => {
+      refreshList(taskList, document.body);
+      const validateElements = document.querySelectorAll('.todo-list');
+
+      expect(validateElements.length)
+        .toBe(1);
+    });
+  });
+});
   
