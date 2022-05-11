@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652279144530" clover="3.2.0">
-  <project timestamp="1652279144530" name="All files">
+<coverage generated="1652281625304" clover="3.2.0">
+  <project timestamp="1652281625305" name="All files">
     <metrics statements="89" coveredstatements="54" conditionals="30" coveredconditionals="7" methods="24" coveredmethods="13" elements="143" coveredelements="74" complexity="0" loc="89" ncloc="89" packages="1" files="5" classes="5"/>
     <file name="add-elem.js" path="C:\Users\ppmar\MICROVERSE\To-Do-List\src\modules\add-elem.js">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>

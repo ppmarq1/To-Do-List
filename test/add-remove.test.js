@@ -103,4 +103,3 @@ describe('Check if the localStorage and the DOM are used:', () => {
     });
   });
 });
-  
