@@ -1,7 +1,7 @@
 import Task from './class-task.js';
 import isStorageAvailable from './local-storage-checker.js';
 
-const storageName = 'taskList';
+export const storageName = 'taskList';
 
 export default class TaskList {
   constructor() {
