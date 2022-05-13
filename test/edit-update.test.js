@@ -63,3 +63,24 @@ describe('Check if edit, update, and clear are working:', () => {
         .toBe(true);
     });
   });
+  describe('Clear all completed tasks:', () => {
+    test(`localStorage clear completed tasks ("${taskBNew}")`, () => {
+      taskList.clearCompleted();
+
+      expect(JSON.parse(localStorage.getItem(storageName)))
+        .toEqual([
+          { description: taskA, id: 1, completed: false },
+          { description: taskC, id: 2, completed: false },
+        ]);
+    });
+    // DOM
+    test(`DOM clear completed tasks ("${taskBNew}")`, () => {
+      refreshList(taskList, document.body);
+
+      const validateElements = document.querySelectorAll('.todo-list');
+
+      expect(validateElements.length)
+        .toBe(2);
+    });
+  });
+});
