@@ -66,7 +66,6 @@ describe('Check if edit, update, and clear are working:', () => {
   describe('Clear all completed tasks:', () => {
     test(`localStorage clear completed tasks ("${taskBNew}")`, () => {
       taskList.clearCompleted();
-
       expect(JSON.parse(localStorage.getItem(storageName)))
         .toEqual([
           { description: taskA, id: 1, completed: false },
