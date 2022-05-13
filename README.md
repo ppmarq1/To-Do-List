@@ -28,9 +28,6 @@ npm i --save-dev jest-localstorage-mock
 
 ## Run tests
 
-npx stylelint "\*_/_.{css,scss}"
-npx hint .
-npx eslint .
 npm test
 
 - Web Browser
