@@ -35,7 +35,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "hint": "^6.1.12",
+    "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.0.3",
     "jest-localstorage-mock": "^2.4.21",

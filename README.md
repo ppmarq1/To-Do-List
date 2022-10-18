@@ -14,7 +14,7 @@
 
 ## Live Demo 
 
-Feel free to check the: [Portfolio-link](https://ppmarq1.github.io/To-Do-List/)
+Feel free to check the: [Portfolio-link](https://to-do-list-ppmarq.netlify.app/)
 
 ### Install
 
